@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckgiwkhhrd0n5"]
+
+[ext_resource type="Script" uid="uid://lit6rdfe4gcb" path="res://blop/blop.gd" id="1_b1ed1"]
+[ext_resource type="Texture2D" uid="uid://bbxkuull58cxa" path="res://art/blue_goop1.png" id="2_7wto4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_528iu"]
+size = Vector2(65, 32)
+
+[node name="Blop" type="CharacterBody2D" groups=["blop"]]
+script = ExtResource("1_b1ed1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 16)
+shape = SubResource("RectangleShape2D_528iu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7wto4")

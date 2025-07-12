@@ -27,3 +27,12 @@ func _physics_process(delta: float) -> void:
 		
 		
 	move_and_slide()
+
+
+func power_up(blop):
+	if blop.object_id == "plume":
+		$AnimatedSprite2D.play("plume")
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("blop"):
+		power_up(body)
