@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsgx2u2duawvl"]
+[gd_scene load_steps=5 format=3 uid="uid://dsgx2u2duawvl"]
 
 [ext_resource type="Script" uid="uid://coeqloeopxjcd" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://cpdgoloheb2hm" path="res://art/rosa_goop1.png" id="2_4ntmi"]
+[ext_resource type="AudioStream" uid="uid://b2ughanxnsav3" path="res://sound/bloop.wav" id="2_btcbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(64, 64)
@@ -9,6 +11,7 @@ size = Vector2(64, 64)
 script = ExtResource("1_l8h54")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -32.0
 offset_top = -32.0
 offset_right = 32.0
@@ -32,3 +35,11 @@ offset_right = 25.0
 offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4ntmi")
+
+[node name="Sound" type="Node2D" parent="."]
+
+[node name="Bloop" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("2_btcbx")
