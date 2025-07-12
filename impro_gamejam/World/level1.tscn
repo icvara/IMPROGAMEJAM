@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://beexyjp432l28"]
+[gd_scene load_steps=10 format=4 uid="uid://beexyjp432l28"]
 
 [ext_resource type="Texture2D" uid="uid://tte4h822dsfd" path="res://art/ground1_tilemap.png" id="1_rgxe0"]
 [ext_resource type="PackedScene" uid="uid://p3i82iqrk7a6" path="res://Player/blop/blop_oreille.tscn" id="2_rvplu"]
 [ext_resource type="PackedScene" uid="uid://ckgiwkhhrd0n5" path="res://Player/blop/blop_plume.tscn" id="3_jlpxn"]
 [ext_resource type="PackedScene" uid="uid://d3ybhps77piti" path="res://enemy/enemy.tscn" id="4_oa7g3"]
 [ext_resource type="PackedScene" uid="uid://dsgx2u2duawvl" path="res://Player/player.tscn" id="5_jlpxn"]
+[ext_resource type="PackedScene" uid="uid://dxq2pcp3eg74q" path="res://win_flag.tscn" id="6_xbo5i"]
+[ext_resource type="Texture2D" uid="uid://bu6c2ik2w3uee" path="res://art/ground1_inarrow_pointer1.png" id="7_muhib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_in8jg"]
 texture = ExtResource("1_rgxe0")
@@ -104,3 +106,35 @@ position = Vector2(211, 95)
 
 [node name="enemy9" parent="." instance=ExtResource("4_oa7g3")]
 position = Vector2(1276, 14)
+
+[node name="Node2D" parent="." instance=ExtResource("6_xbo5i")]
+position = Vector2(424, 91)
+
+[node name="Ground1InarrowPointer1" type="Sprite2D" parent="."]
+position = Vector2(1734, 790)
+texture = ExtResource("7_muhib")
+
+[node name="Ground1InarrowPointer2" type="Sprite2D" parent="."]
+position = Vector2(2455, 794)
+texture = ExtResource("7_muhib")
+
+[node name="Ground1InarrowPointer3" type="Sprite2D" parent="."]
+position = Vector2(3915, 997.5)
+rotation = 1.5708
+scale = Vector2(1.3125, 1.14062)
+texture = ExtResource("7_muhib")
+
+[node name="Ground1InarrowPointer4" type="Sprite2D" parent="."]
+position = Vector2(3850, 1996)
+rotation = 1.5708
+scale = Vector2(1.3125, 1.14062)
+texture = ExtResource("7_muhib")
+
+[node name="Ground1InarrowPointer5" type="Sprite2D" parent="."]
+position = Vector2(3404, 330)
+rotation = 3.14159
+texture = ExtResource("7_muhib")
+
+[node name="Ground1InarrowPointer5" type="Sprite2D" parent="Ground1InarrowPointer5"]
+position = Vector2(1350, 80.9999)
+texture = ExtResource("7_muhib")
