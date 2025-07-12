@@ -32,6 +32,9 @@ func _physics_process(delta: float) -> void:
 func power_up(blop):
 	if blop.object_id == "plume":
 		$AnimatedSprite2D.play("plume")
+	elif blop.object_id == "oreille":
+		$AnimatedSprite2D.play("oreille")
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("blop"):
