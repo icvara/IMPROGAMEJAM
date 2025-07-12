@@ -138,6 +138,3 @@ texture = ExtResource("7_muhib")
 [node name="Ground1InarrowPointer5" type="Sprite2D" parent="Ground1InarrowPointer5"]
 position = Vector2(1350, 80.9999)
 texture = ExtResource("7_muhib")
-
-[node name="WinFlag2" parent="." instance=ExtResource("6_xbo5i")]
-position = Vector2(666, 918)

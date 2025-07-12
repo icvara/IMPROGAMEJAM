@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci2xbhdosuj3m"]
+[gd_scene load_steps=5 format=3 uid="uid://ci2xbhdosuj3m"]
 
 [ext_resource type="Script" uid="uid://cv72mx36r5j0n" path="res://menus.gd" id="1_e8j80"]
 [ext_resource type="Texture2D" uid="uid://bahxdh5ie88df" path="res://art/BigBackground1.png" id="2_e8j80"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yjkwx"]
 font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_e8j80"]
+font_size = 112
+outline_size = 2
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -58,6 +62,19 @@ text = "START"
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "QUIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -602.0
+offset_right = 602.0
+offset_bottom = 175.0
+grow_horizontal = 2
+text = "Sweet Combination"
+label_settings = SubResource("LabelSettings_e8j80")
+horizontal_alignment = 1
 
 [connection signal="button_down" from="VBoxContainer/Start" to="." method="_on_start_button_down"]
 [connection signal="button_down" from="VBoxContainer/Quit" to="." method="_on_quit_button_down"]
