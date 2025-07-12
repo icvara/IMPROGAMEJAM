@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5uytwfbdkqeg"]
+
+[ext_resource type="Script" uid="uid://dqsmehdgwxino" path="res://World/death_zone.gd" id="1_jfo1o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wb0lf"]
+size = Vector2(1151, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfo1o"]
+size = Vector2(1171, 146)
+
+[node name="DeathZone" type="StaticBody2D"]
+script = ExtResource("1_jfo1o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1149.0
+offset_bottom = 116.0
+color = Color(0.952512, 0.455393, 0.339555, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(574, 59)
+shape = SubResource("RectangleShape2D_wb0lf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(575.5, 63)
+shape = SubResource("RectangleShape2D_jfo1o")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

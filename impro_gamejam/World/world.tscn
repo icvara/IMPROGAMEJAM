@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcuwimpcjmvfl"]
+[gd_scene load_steps=4 format=3 uid="uid://dcuwimpcjmvfl"]
 
+[ext_resource type="PackedScene" uid="uid://b5uytwfbdkqeg" path="res://World/death_zone.tscn" id="1_8a836"]
 [ext_resource type="PackedScene" uid="uid://dsgx2u2duawvl" path="res://Player/player.tscn" id="1_62w18"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a836"]
@@ -70,6 +71,10 @@ offset_bottom = 568.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 position = Vector2(238.5, 549)
 shape = SubResource("RectangleShape2D_8a836")
+
+[node name="DeathZone" parent="." instance=ExtResource("1_8a836")]
+position = Vector2(-1758, 674)
+scale = Vector2(4, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_62w18")]
 position = Vector2(446, 152)

@@ -7,8 +7,10 @@ extends CharacterBody2D
 @export var GRAVITY = 9.8 * 100
 
 
-
-
+func _input(event):
+	if event.is_action_pressed("restart"):
+		get_tree().reload_current_scene()
+		
 func _physics_process(delta: float) -> void:
 	var input_direction = Input.get_axis("left", "right")
 	velocity.x = input_direction * speed
