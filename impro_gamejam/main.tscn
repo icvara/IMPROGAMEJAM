@@ -1,12 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0a50yvhxgo1q"]
+[gd_scene load_steps=2 format=3 uid="uid://b0a50yvhxgo1q"]
 
 [ext_resource type="PackedScene" uid="uid://beexyjp432l28" path="res://World/level1.tscn" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://b5uytwfbdkqeg" path="res://World/death_zone.tscn" id="2_1bvp3"]
 
 [node name="main" type="Node2D"]
 
 [node name="tile_0" parent="." instance=ExtResource("1_0xm2m")]
-
-[node name="DeathZone" parent="." instance=ExtResource("2_1bvp3")]
-position = Vector2(-6709, 1420)
-scale = Vector2(8, 1)
