@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt8ikbwlcm0u0"]
+[gd_scene load_steps=5 format=3 uid="uid://dt8ikbwlcm0u0"]
 
 [ext_resource type="Texture2D" uid="uid://tte4h822dsfd" path="res://art/ground1_tilemap.png" id="1_xi35y"]
+[ext_resource type="Script" uid="uid://bijyjlihefhag" path="res://Player/platform_player.gd" id="2_s51m2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s51m2"]
 texture = ExtResource("1_xi35y")
@@ -62,6 +63,11 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_s51m2")
 
 [node name="platform_player" type="TileMapLayer"]
-position = Vector2(-95, -32)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1, 0, 3, 0, 0, 0)
 tile_set = SubResource("TileSet_kxus4")
+script = ExtResource("2_s51m2")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
