@@ -50,15 +50,11 @@ func action():
 			var plt = platform.instantiate()
 			get_parent().add_child(plt)
 			plt.global_position = get_global_mouse_position()
-			await get_tree().create_timer(300000.0).timeout
+			await get_tree().create_timer(3.0).timeout
 			print("timer waited")
 			oreille_platform =1
 				
-		else :
-			await get_tree().create_timer(3.0)
-			print("connard")
-			oreille_platform =1
-			pass
+	
 	pass
 
 func power_up(blop):
@@ -71,6 +67,7 @@ func power_up(blop):
 		$AnimatedSprite2D.play("oreille")
 		if part.has("oreille") == false:
 			part.append("oreille")
+			oreille_platform = 1
 
 	if part.has("oreille") and part.has("plume"):
 		$AnimatedSprite2D.play("oreille_plume")
