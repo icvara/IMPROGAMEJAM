@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://dsgx2u2duawvl"]
+[gd_scene load_steps=18 format=3 uid="uid://dsgx2u2duawvl"]
 
 [ext_resource type="Script" uid="uid://coeqloeopxjcd" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="AudioStream" uid="uid://b2ughanxnsav3" path="res://sound/bloop.wav" id="2_btcbx"]
 [ext_resource type="PackedScene" uid="uid://dt8ikbwlcm0u0" path="res://Player/platform_player.tscn" id="2_fhl08"]
 [ext_resource type="Texture2D" uid="uid://cbplhjfghqw5k" path="res://art/char1.png" id="2_gwnis"]
+[ext_resource type="PackedScene" uid="uid://p3i82iqrk7a6" path="res://Player/blop/blop_oreille.tscn" id="3_x3vf3"]
+[ext_resource type="PackedScene" uid="uid://ckgiwkhhrd0n5" path="res://Player/blop/blop_plume.tscn" id="4_apopc"]
 [ext_resource type="Texture2D" uid="uid://csjt0fe2trukh" path="res://art/char2.png" id="5_od3ui"]
 [ext_resource type="Texture2D" uid="uid://beh3yoemwfcnp" path="res://art/char2_walk.png" id="6_00tjw"]
 [ext_resource type="Texture2D" uid="uid://3uqir7eftm0m" path="res://art/char2_walk_fly.png" id="7_x3vf3"]
@@ -69,6 +71,8 @@ size = Vector2(102, 65)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_l8h54")
 platform = ExtResource("2_fhl08")
+oreille = ExtResource("3_x3vf3")
+plume = ExtResource("4_apopc")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
