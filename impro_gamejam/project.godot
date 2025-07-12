@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="IMPRO_GAMEJAM"
-run/main_scene="uid://dcuwimpcjmvfl"
+run/main_scene="uid://b0a50yvhxgo1q"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
