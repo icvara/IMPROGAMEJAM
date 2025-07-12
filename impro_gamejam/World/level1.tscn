@@ -61,10 +61,10 @@ tile_set = SubResource("TileSet_6hgml")
 
 [node name="Blop" parent="." instance=ExtResource("2_rvplu")]
 
-position = Vector2(743, 916)
+position = Vector2(885, 646)
 
 [node name="Blop2" parent="." instance=ExtResource("3_jlpxn")]
-position = Vector2(630, 908)
+position = Vector2(745, 655)
 
 [node name="enemy" parent="." instance=ExtResource("4_oa7g3")]
 position = Vector2(1503, 1126)
