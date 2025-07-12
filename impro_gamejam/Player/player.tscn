@@ -112,7 +112,6 @@ stream = ExtResource("2_btcbx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x3vf3")
-animation = &"oreille_plume"
 
 [node name="Area2D" type="Area2D" parent="."]
 

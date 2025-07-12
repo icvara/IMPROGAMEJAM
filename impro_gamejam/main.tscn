@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0a50yvhxgo1q"]
+[gd_scene load_steps=3 format=3 uid="uid://b0a50yvhxgo1q"]
 
 [ext_resource type="PackedScene" uid="uid://beexyjp432l28" path="res://World/level1.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b5uytwfbdkqeg" path="res://World/death_zone.tscn" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://dsgx2u2duawvl" path="res://Player/player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://ckgiwkhhrd0n5" path="res://Player/blop/blop_plume.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://p3i82iqrk7a6" path="res://Player/blop/blop_oreille.tscn" id="5_lquwl"]
 
 [node name="main" type="Node2D"]
 
@@ -13,12 +10,3 @@
 [node name="DeathZone" parent="." instance=ExtResource("2_1bvp3")]
 position = Vector2(-6709, 1420)
 scale = Vector2(8, 1)
-
-[node name="Player" parent="." instance=ExtResource("2_h2yge")]
-position = Vector2(1024, 670)
-
-[node name="Blop" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(813, 910)
-
-[node name="Blop2" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(1702, 425)
