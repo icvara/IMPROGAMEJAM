@@ -222,8 +222,9 @@ offset_left = 471.0
 offset_top = -310.0
 offset_right = 568.0
 offset_bottom = -235.0
-text = "F/left mouse click: platform
+text = "F/mouse click: platform
 A/D: move
-SPACE: jump"
+SPACE: jump
+R: restart"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
