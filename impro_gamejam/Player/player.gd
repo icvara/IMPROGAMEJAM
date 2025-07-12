@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var jump_speed = 500
 @export var GRAVITY = 9.8 * 100
 @export var platform: PackedScene
-
+var oreille_platform = -1
 var alive = true
 var part = []
 
@@ -39,15 +39,26 @@ func _physics_process(delta: float) -> void:
 			n_jump += 1
 		
 		
-	move_and_slide()
+	move_and_slide() 
 
 
 func action():
 	if part.has("oreille"):
-		var plt = platform.instantiate()
-		get_parent().add_child(plt)
-		plt.global_position = get_global_mouse_position()
-	
+		print(oreille_platform)
+		if oreille_platform == 1 :
+			oreille_platform = 0
+			var plt = platform.instantiate()
+			get_parent().add_child(plt)
+			plt.global_position = get_global_mouse_position()
+			await get_tree().create_timer(300000.0).timeout
+			print("timer waited")
+			oreille_platform =1
+				
+		else :
+			await get_tree().create_timer(3.0)
+			print("connard")
+			oreille_platform =1
+			pass
 	pass
 
 func power_up(blop):
