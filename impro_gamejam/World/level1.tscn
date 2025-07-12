@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://beexyjp432l28"]
+[gd_scene load_steps=7 format=4 uid="uid://beexyjp432l28"]
 
 [ext_resource type="Texture2D" uid="uid://tte4h822dsfd" path="res://art/ground1_tilemap.png" id="1_rgxe0"]
+[ext_resource type="PackedScene" uid="uid://p3i82iqrk7a6" path="res://blop/blop_oreille.tscn" id="2_rvplu"]
+[ext_resource type="PackedScene" uid="uid://ckgiwkhhrd0n5" path="res://blop/blop_plume.tscn" id="3_jlpxn"]
+[ext_resource type="PackedScene" uid="uid://d3ybhps77piti" path="res://enemy/enemy.tscn" id="4_oa7g3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_in8jg"]
 texture = ExtResource("1_rgxe0")
@@ -54,3 +57,15 @@ sources/0 = SubResource("TileSetAtlasSource_in8jg")
 [node name="tile_0" type="TileMapLayer"]
 tile_map_data = PackedByteArray("AAACAAIAAAAAAAEAAAACAAYAAAACAAEAAAABAAYAAAABAAAAAAABAAcAAAADAAIAAAABAAgAAAADAAIAAAABAAkAAAAEAAAAAAACAAkAAAACAAIAAAADAAkAAAACAAIAAAAEAAkAAAACAAIAAAADAAYAAAACAAAAAAADAAcAAAADAAEAAAAEAAgAAAACAAEAAAAFAAgAAAACAAEAAAAGAAkAAAADAAAAAAAGAAgAAAACAAAAAAAFAAkAAAACAAIAAAAJAAsAAAAAAAEAAAAKAAsAAAABAAEAAAALAAsAAAABAAEAAAAMAAsAAAABAAEAAAANAAsAAAABAAEAAAAOAAsAAAABAAEAAAAPAAsAAAABAAEAAAAQAAsAAAABAAEAAAARAAsAAAABAAEAAAASAAsAAAABAAEAAAATAAsAAAABAAEAAAAUAAsAAAABAAEAAAAVAAsAAAABAAEAAAAWAAsAAAABAAEAAAAXAAsAAAABAAEAAAAYAAsAAAABAAEAAAAZAAsAAAABAAEAAAAaAAsAAAABAAEAAAAbAAsAAAABAAEAAAAcAAsAAAABAAEAAAAdAAsAAAABAAEAAAAeAAsAAAABAAEAAAAfAAsAAAABAAEAAAAgAAsAAAAEAAEAAAAgAAoAAAABAAIAAAAhAAsAAAABAAEAAAAiAAsAAAABAAEAAAAjAAsAAAABAAMAAAAgAAkAAAABAAIAAAAgAAgAAAAAAAIAAAAZAAgAAAACAAIAAAAZAAcAAAACAAEAAAAaAAcAAAACAAEAAAAbAAcAAAACAAEAAAAaAAgAAAACAAIAAAAbAAgAAAACAAIAAAAYAAgAAAAEAAAAAAAYAAcAAAABAAAAAAAcAAcAAAACAAAAAAAcAAgAAAADAAAAAAADAAIAAAAEAAEAAAAEAAIAAAABAAEAAAADAAMAAAABAAIAAAADAAEAAAABAAIAAAAgAAwAAAAAAAMAAAADAAgAAAACAAMAAAACAAgAAAACAAQAAAACAAcAAAACAAQAAAAFAAIAAAABAAMAAAADAAQAAAAAAAMAAAADAAAAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_6hgml")
+
+[node name="Blop" parent="." instance=ExtResource("2_rvplu")]
+position = Vector2(769, 674)
+
+[node name="Blop2" parent="." instance=ExtResource("3_jlpxn")]
+position = Vector2(656, 666)
+
+[node name="enemy" parent="." instance=ExtResource("4_oa7g3")]
+position = Vector2(1411, 526)
+
+[node name="enemy2" parent="." instance=ExtResource("4_oa7g3")]
+position = Vector2(390, 420)
