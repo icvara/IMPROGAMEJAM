@@ -1,32 +1,38 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsgx2u2duawvl"]
+[gd_scene load_steps=16 format=3 uid="uid://dsgx2u2duawvl"]
 
 [ext_resource type="Script" uid="uid://coeqloeopxjcd" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="AudioStream" uid="uid://b2ughanxnsav3" path="res://sound/bloop.wav" id="2_btcbx"]
 [ext_resource type="PackedScene" uid="uid://dt8ikbwlcm0u0" path="res://Player/platform_player.tscn" id="2_fhl08"]
 [ext_resource type="Texture2D" uid="uid://cbplhjfghqw5k" path="res://art/char1.png" id="2_gwnis"]
-[ext_resource type="Texture2D" uid="uid://c4mm1npsh3fre" path="res://art/char1_ears.png" id="4_k53q1"]
-[ext_resource type="Texture2D" uid="uid://b2i7l1ieggvmu" path="res://art/char1_jump.png" id="5_fhl08"]
+[ext_resource type="Texture2D" uid="uid://csjt0fe2trukh" path="res://art/char2.png" id="5_od3ui"]
+[ext_resource type="Texture2D" uid="uid://beh3yoemwfcnp" path="res://art/char2_walk.png" id="6_00tjw"]
+[ext_resource type="Texture2D" uid="uid://3uqir7eftm0m" path="res://art/char2_walk_fly.png" id="7_x3vf3"]
+[ext_resource type="Texture2D" uid="uid://bx22ltpbhnib0" path="res://art/char2_fly.png" id="8_apopc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vtle1"]
-atlas = ExtResource("2_gwnis")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5htga"]
+atlas = ExtResource("5_od3ui")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
-atlas = ExtResource("4_k53q1")
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5o4e"]
+atlas = ExtResource("6_00tjw")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
-atlas = ExtResource("5_fhl08")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu6f8"]
+atlas = ExtResource("7_x3vf3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkpta"]
+atlas = ExtResource("8_apopc")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x3vf3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vtle1")
+"texture": SubResource("AtlasTexture_5htga")
 }],
 "loop": true,
 "name": &"default",
@@ -34,7 +40,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_od3ui")
+"texture": SubResource("AtlasTexture_p5o4e")
 }],
 "loop": true,
 "name": &"oreille",
@@ -42,7 +48,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_00tjw")
+"texture": SubResource("AtlasTexture_gu6f8")
+}],
+"loop": true,
+"name": &"oreille_plume",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkpta")
 }],
 "loop": true,
 "name": &"plume",

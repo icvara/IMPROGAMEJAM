@@ -61,8 +61,11 @@ func power_up(blop):
 		if part.has("oreille") == false:
 			part.append("oreille")
 
+	if part.has("oreille") and part.has("plume"):
+		$AnimatedSprite2D.play("oreille_plume")
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("blop"):
 		power_up(body)
+		body.queue_free()
