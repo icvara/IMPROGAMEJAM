@@ -11,14 +11,14 @@
 [node name="tile_0" parent="." instance=ExtResource("1_0xm2m")]
 
 [node name="DeathZone" parent="." instance=ExtResource("2_1bvp3")]
-position = Vector2(-587, 962)
+position = Vector2(-6709, 1420)
 scale = Vector2(8, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_h2yge")]
 position = Vector2(1098, 291)
 
 [node name="Blop" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(819, 670)
+position = Vector2(813, 910)
 
 [node name="Blop2" parent="." instance=ExtResource("5_lquwl")]
 position = Vector2(1702, 425)
