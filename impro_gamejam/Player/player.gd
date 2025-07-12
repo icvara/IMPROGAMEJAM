@@ -16,6 +16,10 @@ func _input(event):
 func _physics_process(delta: float) -> void:
 	if alive:
 		var input_direction = Input.get_axis("left", "right")
+		if Input.is_action_pressed("left"):
+			$AnimatedSprite2D.flip_h = true
+		elif Input.is_action_pressed("right"):
+			$AnimatedSprite2D.flip_h = false
 		velocity.x = input_direction * speed
 		if not is_on_floor():
 			velocity.y += GRAVITY * delta
