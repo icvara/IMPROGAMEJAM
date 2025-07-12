@@ -107,7 +107,7 @@ position = Vector2(211, 95)
 [node name="enemy9" parent="." instance=ExtResource("4_oa7g3")]
 position = Vector2(1276, 14)
 
-[node name="Node2D" parent="." instance=ExtResource("6_xbo5i")]
+[node name="WinFlag" parent="." instance=ExtResource("6_xbo5i")]
 position = Vector2(424, 91)
 
 [node name="Ground1InarrowPointer1" type="Sprite2D" parent="."]
@@ -138,3 +138,6 @@ texture = ExtResource("7_muhib")
 [node name="Ground1InarrowPointer5" type="Sprite2D" parent="Ground1InarrowPointer5"]
 position = Vector2(1350, 80.9999)
 texture = ExtResource("7_muhib")
+
+[node name="WinFlag2" parent="." instance=ExtResource("6_xbo5i")]
+position = Vector2(666, 918)
