@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcuwimpcjmvfl"]
+
+[ext_resource type="PackedScene" uid="uid://dsgx2u2duawvl" path="res://Player/player.tscn" id="1_62w18"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a836"]
+size = Vector2(479, 40)
+
+[node name="world" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = 1.0
+offset_top = 528.0
+offset_right = 478.0
+offset_bottom = 568.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(238.5, 549)
+shape = SubResource("RectangleShape2D_8a836")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(388, -94)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+offset_left = 1.0
+offset_top = 528.0
+offset_right = 478.0
+offset_bottom = 568.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(238.5, 549)
+shape = SubResource("RectangleShape2D_8a836")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(791, 3)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
+offset_left = 1.0
+offset_top = 528.0
+offset_right = 478.0
+offset_bottom = 568.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(238.5, 549)
+shape = SubResource("RectangleShape2D_8a836")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(-206, -246)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4"]
+offset_left = 1.0
+offset_top = 528.0
+offset_right = 478.0
+offset_bottom = 568.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(238.5, 549)
+shape = SubResource("RectangleShape2D_8a836")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(-532, -430)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D5"]
+offset_left = 1.0
+offset_top = 528.0
+offset_right = 478.0
+offset_bottom = 568.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(238.5, 549)
+shape = SubResource("RectangleShape2D_8a836")
+
+[node name="Player" parent="." instance=ExtResource("1_62w18")]
+position = Vector2(446, 152)
+speed = 400
+jump_speed = 500
+GRAVITY = 980.0
