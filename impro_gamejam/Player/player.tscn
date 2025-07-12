@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dsgx2u2duawvl"]
+[gd_scene load_steps=26 format=3 uid="uid://dsgx2u2duawvl"]
 
 [ext_resource type="Script" uid="uid://coeqloeopxjcd" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="AudioStream" uid="uid://b2ughanxnsav3" path="res://sound/bloop.wav" id="2_btcbx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://p3i82iqrk7a6" path="res://Player/blop/blop_oreille.tscn" id="3_x3vf3"]
 [ext_resource type="PackedScene" uid="uid://ckgiwkhhrd0n5" path="res://Player/blop/blop_plume.tscn" id="4_apopc"]
 [ext_resource type="Texture2D" uid="uid://52076bnrvpte" path="res://art/carsheet.png" id="6_vtle1"]
+[ext_resource type="AudioStream" uid="uid://dy2nbu0qveqvm" path="res://sound/damagev2.wav" id="8_od3ui"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(33, 26)
@@ -206,6 +207,9 @@ sprite_frames = SubResource("SpriteFrames_7emwf")
 
 [node name="Bloop" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("2_btcbx")
+
+[node name="Damagev2" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("8_od3ui")
 
 [node name="Area2D" type="Area2D" parent="."]
 

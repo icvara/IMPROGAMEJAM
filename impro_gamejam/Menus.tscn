@@ -1,13 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://ci2xbhdosuj3m"]
 
 [ext_resource type="Script" uid="uid://cv72mx36r5j0n" path="res://menus.gd" id="1_e8j80"]
-[ext_resource type="Texture2D" uid="uid://bahxdh5ie88df" path="res://art/BigBackground1.png" id="2_e8j80"]
+[ext_resource type="Texture2D" uid="uid://c0puw4oi6v6la" path="res://art/BigBackground2.png" id="2_e8j80"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yjkwx"]
 font_size = 64
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_e8j80"]
 font_size = 112
+font_color = Color(0, 0, 0, 1)
 outline_size = 2
 
 [node name="Control" type="Control"]

@@ -87,6 +87,7 @@ func _physics_process(delta: float) -> void:
 
 func get_hurt():
 	if invuframe == false:
+		$Sound/Damagev2.play()
 		if part.size()> 0:
 			var lost_part
 			var random_id = randi_range(0,part.size()-1)
