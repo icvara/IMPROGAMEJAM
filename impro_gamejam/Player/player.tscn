@@ -1,11 +1,55 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsgx2u2duawvl"]
+[gd_scene load_steps=12 format=3 uid="uid://dsgx2u2duawvl"]
 
 [ext_resource type="Script" uid="uid://coeqloeopxjcd" path="res://Player/player.gd" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://cpdgoloheb2hm" path="res://art/rosa_goop1.png" id="2_4ntmi"]
 [ext_resource type="AudioStream" uid="uid://b2ughanxnsav3" path="res://sound/bloop.wav" id="2_btcbx"]
+[ext_resource type="Texture2D" uid="uid://cbplhjfghqw5k" path="res://art/char1.png" id="2_gwnis"]
+[ext_resource type="Texture2D" uid="uid://c4mm1npsh3fre" path="res://art/char1_ears.png" id="4_k53q1"]
+[ext_resource type="Texture2D" uid="uid://b2i7l1ieggvmu" path="res://art/char1_jump.png" id="5_fhl08"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtle1"]
+atlas = ExtResource("2_gwnis")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
+atlas = ExtResource("4_k53q1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
+atlas = ExtResource("5_fhl08")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3vf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtle1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od3ui")
+}],
+"loop": true,
+"name": &"oreille",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00tjw")
+}],
+"loop": true,
+"name": &"plume",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k53q1"]
+size = Vector2(102, 65)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_l8h54")
@@ -37,9 +81,21 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_4ntmi")
+visible = false
+texture = ExtResource("2_gwnis")
 
 [node name="Sound" type="Node2D" parent="."]
 
 [node name="Bloop" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("2_btcbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x3vf3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_k53q1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
