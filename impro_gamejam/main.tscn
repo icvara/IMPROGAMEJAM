@@ -18,7 +18,7 @@ scale = Vector2(8, 1)
 position = Vector2(1098, 291)
 
 [node name="Blop" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(1734, 416)
+position = Vector2(819, 670)
 
 [node name="Blop2" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(673, 672)
+position = Vector2(1702, 425)

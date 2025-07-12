@@ -5,13 +5,20 @@ extends CharacterBody2D
 @export var speed = 400
 @export var jump_speed = 500
 @export var GRAVITY = 9.8 * 100
+@export var platform: PackedScene
 
 var alive = true
+var part = []
+
+var max_jump = 1
+var n_jump = 0
 
 func _input(event):
 	if event.is_action_pressed("restart"):
 		alive =true
 		get_tree().reload_current_scene()
+	if event.is_action_pressed("absorb"):
+		action()
 		
 func _physics_process(delta: float) -> void:
 	if alive:
@@ -21,23 +28,39 @@ func _physics_process(delta: float) -> void:
 		elif Input.is_action_pressed("right"):
 			$AnimatedSprite2D.flip_h = false
 		velocity.x = input_direction * speed
-		if not is_on_floor():
+		if not is_on_floor() :
 			velocity.y += GRAVITY * delta
+		else:
+			n_jump = 0
 		
-		if Input.is_action_just_pressed("jump"):
-			print("jump")
+		if Input.is_action_just_pressed("jump") and n_jump < max_jump:
 			$Sound/Bloop.play()
 			velocity.y = -jump_speed
+			n_jump += 1
 		
 		
 	move_and_slide()
 
 
+func action():
+	if part.has("oreille"):
+		var plt = platform.instantiate()
+		get_parent().add_child(plt)
+		plt.global_position = get_global_mouse_position()
+	
+	pass
+
 func power_up(blop):
 	if blop.object_id == "plume":
 		$AnimatedSprite2D.play("plume")
+		if part.has("plume") == false:
+			part.append("plume")
+			max_jump = 2
 	elif blop.object_id == "oreille":
 		$AnimatedSprite2D.play("oreille")
+		if part.has("oreille") == false:
+			part.append("oreille")
+
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
