@@ -1,25 +1,17 @@
-[gd_scene load_steps=13 format=4 uid="uid://d3ybhps77piti"]
+[gd_scene load_steps=11 format=4 uid="uid://d3ybhps77piti"]
 
 [ext_resource type="Script" uid="uid://7wq8ohrnrx48" path="res://enemy/enemy.gd" id="1_p200p"]
-[ext_resource type="Texture2D" uid="uid://bhujrbsh4mhjs" path="res://art/splitter2.png" id="2_p200p"]
-[ext_resource type="Texture2D" uid="uid://cpqo4c1ensgwn" path="res://art/splitter3.png" id="3_pmsee"]
+[ext_resource type="Texture2D" uid="uid://cnx142anj23uu" path="res://art/splitter4.png" id="2_ofsxj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ffra"]
-atlas = ExtResource("2_p200p")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e355f"]
-atlas = ExtResource("3_pmsee")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppra6"]
+atlas = ExtResource("2_ofsxj")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_78jik"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ffra")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e355f")
+"texture": SubResource("AtlasTexture_ppra6")
 }],
 "loop": true,
 "name": &"default",
@@ -83,7 +75,6 @@ script = ExtResource("1_p200p")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_78jik")
 autoplay = "default"
-frame = 1
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
